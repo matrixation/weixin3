@@ -1,0 +1,135 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>1505班</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <div id="js-header" class="header">
+    <a class="h arrow-return" href="javascript:;"><img src="./image/1_03.jpg"/></a>
+    <span class="header-title">1505班(9)</span>
+    <a class="h group-header" href="javascript:;"><img src="./image/1_06.jpg"/></a>
+  </div>
+  <div id="js-container" class="container">
+    <div class="flow-left leftText clearfix" v-if="leftText">
+      <div class="flow-time">
+        <div class="date-time">{{dateTime}}</div>
+      </div>
+      <div class="left-header">
+        <div class="img-box">
+          <img :src="{{headImage}}" alt="" class="pic">
+        </div>
+      </div>
+      <div class="left-main">
+        <div class="left-txt">
+          <span class="left-arrow"></span>{{content}}
+        </div>
+      </div>
+    </div>
+    #
+    <div class="flow-right rightText clearfix" v-if="rightText">
+      <div class="flow-time">
+        <div class="date-time">{{dateTime}}</div>
+      </div>
+      <div class="right-header">
+        <div class="img-box">
+          <img :src="{{headImage}}" alt="" class="pic">
+        </div>
+      </div>
+      <div class="right-main clearfix">
+        <div class="right-txt">
+          <span class="right-arrow"></span> {{content}}
+        </div>
+      </div>
+    </div>
+    #
+    <div class="flow-left leftAudio clearfix" v-if="leftSound">
+      <div class="flow-time">
+        <div class="date-time">{{dateTime}}</div>
+      </div>
+      <div class="left-header">
+        <div class="img-box">
+          <img :src="{{headImage}}" alt="" class="pic">
+        </div>
+      </div>
+      <div class="left-main">
+        <div class="left-audio js-audio">
+          <i class="radio-step js-radio-step icon-radio-step3"></i>
+          <audio :src="{{sound.url}}" class="js-audiosrc"></audio>
+          <span class="delay-second">{{sound.duration}}</span>
+        </div>
+      </div>
+    </div>
+    #
+    <div class="flow-right rightAudio clearfix" v-if="rightSound">
+      <div class="flow-time">
+        <div class="date-time">{{dateTime}}</div>
+      </div>
+      <div class="right-header">
+        <div class="img-box">
+          <img :src="{{headImage}}" alt="" class="pic">
+        </div>
+      </div>
+      <div class="right-main clearfix">
+        <div class="right-audio js-audio">
+          <i class="radio-step js-radio-step icon-radio-step3"></i>
+          <audio :src="{{sound.url}}" class="js-audiosrc"></audio>
+          <span class="delay-second">{{sound.duration}}</span>
+        </div>
+      </div>
+    </div>
+    #
+    <div class="flow-left leftImg clearfix" v-if="leftImage">
+      <div class="flow-time">
+        <div class="date-time">{{dateTime}}</div>
+      </div>
+      <div class="left-header">
+        <div class="img-box">
+          <img :src="{{headImage}}" alt="" class="pic">
+        </div>
+      </div>
+      <div class="left-main">
+        <div class="left-img">
+          <span class="left-arrow"></span>
+          <img :src="{{imageArray.turl}}" alt="">
+        </div>
+      </div>
+    </div>
+    #
+    <div class="flow-right rightImg clearfix" v-if="rightImage">
+      <div class="flow-time">
+        <div class="date-time">{{dateTime}}</div>
+      </div>
+      <div class="right-header">
+        <div class="img-box">
+          <img :src="{{headImage}}" alt="" class="pic">
+        </div>
+      </div>
+      <div class="right-main clearfix">
+        <div class="right-img">
+          <span class="right-arrow"></span>
+          <img :src="{{imageArray.turl}}" alt="" class="pic">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="js-footer" class="footer">
+    <a href="javascript:;" class="check-key"><img src="./image/1_11.jpg" alt=""></a>
+    <div class="check-main">
+      <input type="text" name="" class="input-show">
+      <span class="txt-show">按住说话</span>
+    </div>
+    <a href="javascript:;" class="img-smile"><img src="./image/1_13.jpg" alt=""></a>
+    <a href="javascript:;" class="img-plus"><img src="./image/1_15.jpg" alt=""></a>
+  </div>
+
+  <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+
+  <script type="text/javascript" src="./js/page.js"></script>
+</body>
+
+</html>
