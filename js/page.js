@@ -4,7 +4,7 @@ var page = {
     this.dataRender();
   },
   initUI: function() {
-    this.$container = $("#js-container");
+    this.$container = $(".js-container");
     this.$audioParents = $(".js-audio");
     this.$audioLoops = this.$audioParents.find(".js-radio-step");
     this.$audios = this.$audioParents.find(".js-audiosrc");
